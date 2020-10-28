@@ -1,0 +1,34 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node version: 10, 12, 14
+    "args": { "VARIANT": "14" }
+  },
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    // 웹 기본
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    // npm
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    // 개발 편의 툴
+    "albert.tabout"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y vim bash-completion && sudo bash -c 'npm completion >> /etc/bash_completion.d/npm-completion'",
+
+  // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}

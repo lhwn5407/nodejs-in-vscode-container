@@ -1,0 +1,27 @@
+{
+  "editor.tabSize": 2,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
+
+  // vscode 자체 검사기 비활성화,
+  // eslint로 모든 코드 검사 수행.
+  "eslint.format.enable": true,
+  "eslint.run": "onType",
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+
+  // 모든 언어에 대한 기본 포매터를 prettier로 지정
+  // editor.formatOnSave 시 사용.
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

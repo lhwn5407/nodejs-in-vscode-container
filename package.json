@@ -1,0 +1,22 @@
+{
+  "name": "ooad-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm install && && npm run install-pre-commit-hook",
+    "install-pre-commit-hook": "cp -avp tools/pre-commit .git/hooks/",
+    "update-readme-toc": "doctoc --github --notitle README.md"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "doctoc": "^1.4.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.1.2"
+  },
+  "dependencies": {}
+}
